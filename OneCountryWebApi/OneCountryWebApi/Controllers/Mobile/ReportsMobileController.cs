@@ -68,7 +68,7 @@ namespace OneCountryWebApi.Controllers.Mobile
         }
 
         // GET: one10/ReportsMobile/5
-        [ResponseType(typeof(Report))]
+        [ResponseType(typeof(MyReports))]
         public async Task<IHttpActionResult> GetReport(int id)
         {
             _user = await _userManager.FindByIdAsync(User.Identity.GetUserId());
@@ -95,18 +95,45 @@ namespace OneCountryWebApi.Controllers.Mobile
         }
 
         // POST: one10/ReportsMobile
-        [ResponseType(typeof(Report))]
-        public async Task<IHttpActionResult> PostReport(Report report)
+        [ResponseType(typeof(MyReportUpload))]
+        public async Task<IHttpActionResult> PostReport(MyReportUpload report)
         {
+            _user = await _userManager.FindByIdAsync(User.Identity.GetUserId());
+
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
+            try
+            {
+                report.MobileNumber = _user.PhoneNumber;
+                string path = HttpContext.Current.Server.MapPath("~/Images");
+                var value = await _repo.CreateReport(report, _user.Id, path);
 
-            db.Reports.Add(report);
-            await db.SaveChangesAsync();
+                if (value.Id == 0 ) throw new Exception("Db Create error");
 
-            return CreatedAtRoute("DefaultApi", new { id = report.ReportId }, report);
+                return CreatedAtRoute("DefaultApi", new
+                {
+                    id = value.Id
+                } ,new BaseResponseModel<MyReportUpload>()
+                    {
+                        IsSucess = true,
+                        RequestedUserMobile = _user.PhoneNumber,
+                        Results = value
+
+                    });
+            }
+            catch (Exception ex)
+            {
+                _log.Error(ex);
+                return Ok(new BaseResponseModel<MyReports>()
+                {
+                    IsSucess = true,
+                    RequestedUserMobile = _user.PhoneNumber,
+                    Exception = new Error(2001, "Processing Error")
+                });
+            }
+            
         }
 
         // DELETE: one10/ReportsMobile/5
