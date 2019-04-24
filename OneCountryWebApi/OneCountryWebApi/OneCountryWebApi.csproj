@@ -217,9 +217,16 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201904241034005_dataModelInit.cs" />
+    <Compile Include="Migrations\201904241034005_dataModelInit.Designer.cs">
+      <DependentUpon>201904241034005_dataModelInit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Action.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\OneReport.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\ApplicationOAuthProvider.cs" />
     <Compile Include="Results\ChallengeResult.cs" />
@@ -318,6 +325,11 @@
       <Project>{fb73c2d6-b4d8-40a7-99f6-641b85e8bf15}</Project>
       <Name>OneCountryData</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201904241034005_dataModelInit.resx">
+      <DependentUpon>201904241034005_dataModelInit.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
