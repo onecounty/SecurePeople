@@ -4,3 +4,7 @@
 
 /OneCountryWebApi/.vs/OneCountryWebApi/v15/Server/sqlite3
 /OneCountryWebApi/.vs/OneCountryWebApi/v16/Server/sqlite3
+/OneCountryWebApi/OneCountry.Data/bin/Debug
+/OneCountryWebApi/OneCountry.Data/obj/Debug/OneCountry.Data.csproj.CopyComplete
+/OneCountryWebApi/OneCountry.Data/obj/Debug/OneCountry.Data.csproj.FileListAbsolute.txt
+/OneCountryWebApi/OneCountryWebApi/bin/OneCountry.Data.dll.config
