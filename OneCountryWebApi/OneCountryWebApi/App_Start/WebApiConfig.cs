@@ -22,7 +22,7 @@ namespace OneCountryWebApi
 
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
-                routeTemplate: "api/{controller}/{id}",
+                routeTemplate: "one10/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
         }

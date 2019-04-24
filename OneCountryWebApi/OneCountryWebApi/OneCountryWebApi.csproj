@@ -45,6 +45,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -213,11 +216,14 @@
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\Mobile\ReportsMobileController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
+    <Compile Include="Converters\ReportMobileConverter.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Interfaces\IMobileOperations.cs" />
     <Compile Include="Migrations\201904241034005_dataModelInit.cs" />
     <Compile Include="Migrations\201904241034005_dataModelInit.Designer.cs">
       <DependentUpon>201904241034005_dataModelInit.cs</DependentUpon>
@@ -225,6 +231,10 @@
     <Compile Include="Migrations\201904241037138_peronaldetails.cs" />
     <Compile Include="Migrations\201904241037138_peronaldetails.Designer.cs">
       <DependentUpon>201904241037138_peronaldetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904241137319_userReference.cs" />
+    <Compile Include="Migrations\201904241137319_userReference.Designer.cs">
+      <DependentUpon>201904241137319_userReference.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
@@ -234,6 +244,8 @@
     <Compile Include="Models\OneReport.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\ApplicationOAuthProvider.cs" />
+    <Compile Include="Repository\Base\BaseRepository.cs" />
+    <Compile Include="Repository\MobileOperationsRepository.cs" />
     <Compile Include="Results\ChallengeResult.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -362,6 +374,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201904241037138_peronaldetails.resx">
       <DependentUpon>201904241037138_peronaldetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904241137319_userReference.resx">
+      <DependentUpon>201904241137319_userReference.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

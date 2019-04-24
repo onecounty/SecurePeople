@@ -50,7 +50,10 @@
   <ItemGroup>
     <Compile Include="Base\BaseResponseModel.cs" />
     <Compile Include="MobileOnly\MyReports.cs" />
+    <Compile Include="OneReport.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportAction.cs" />
+    <Compile Include="UserDetails.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
