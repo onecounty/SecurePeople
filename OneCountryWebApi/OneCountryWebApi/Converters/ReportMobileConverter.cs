@@ -16,7 +16,20 @@ namespace OneCountryWebApi.Converters
         {
             try
             {
-                return new MyReportListItem(item.ReportId, item.CaseId, item.Description, item.LocationLat, item.LocationLong, item.LastAction.ActionName);
+                return new MyReportListItem(item.ReportId, item.CaseId, item.Description, item.LocationLat, item.LocationLong, item.LastAction.ActionName,item.LastAction.ActionName);
+            }
+            catch (Exception ex)
+            {
+                _log.Error(ex);
+                throw;
+            }
+        }
+
+        internal static MyReports ConvertReportsToMyReports(Report item)
+        {
+            try
+            {
+                return new MyReports(item.ReportId, item.CaseId, item.Description, item.LocationLat, item.LocationLong, item.LastAction.ActionName, item.LastAction.ActionName,item.PhotoUrl,item.MobileNumber);
             }
             catch (Exception ex)
             {

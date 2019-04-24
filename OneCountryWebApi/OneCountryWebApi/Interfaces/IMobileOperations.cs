@@ -10,5 +10,7 @@ namespace OneCountryWebApi.Interfaces
     public interface IMobileOperations
     {
         List<MyReportListItem> GetAllMyReports(string userId);
+        MyReports GetMyReportDetail(int Id, string userId);
+        Task<bool> DeleteReport(int Id, string userId);
     }
 }

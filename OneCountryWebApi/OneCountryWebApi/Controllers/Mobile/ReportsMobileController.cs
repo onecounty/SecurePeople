@@ -21,12 +21,13 @@ using OneCountryWebApi.Repository;
 
 namespace OneCountryWebApi.Controllers.Mobile
 {
+    [Authorize(Roles = "Public")]
     public class ReportsMobileController : ApiController
     {
         private ApplicationDbContext db = new ApplicationDbContext();
-        private IMobileOperations _repo = new MobileOperationsRepository();
+        private IMobileOperations _repo  { get; set;}
         private static ILog _log = LogManager.GetLogger(typeof(ReportsMobileController));
-
+        private ApplicationUser _user { get; set; }
         private ApplicationUserManager _userManager
         {
             get
@@ -35,79 +36,62 @@ namespace OneCountryWebApi.Controllers.Mobile
             }
         }
 
+        public ReportsMobileController()
+        {
+            _repo = new MobileOperationsRepository();
+        }
+
         // GET: one10/ReportsMobile
         [ResponseType(typeof(IEnumerable<Report>))]
         public async Task<IHttpActionResult> GetReports()
         {
-            var user = await _userManager.FindByIdAsync(User.Identity.GetUserId());
+            _user = await _userManager.FindByIdAsync(User.Identity.GetUserId());
             try
             {
                 
                 return Ok(new BaseResponseModel<List<MyReportListItem>>() {
                     IsSucess=true,
-                    RequestedUserMobile= user.PhoneNumber,
-                    Results = _repo.GetAllMyReports(user.Id)
+                    RequestedUserMobile= _user.PhoneNumber,
+                    Results = _repo.GetAllMyReports(_user.Id)
                 });
             }
             catch (Exception ex)
             {
-
+                _log.Error(ex);
                 return Ok(new BaseResponseModel<List<MyReportListItem>>()
                 {
                     IsSucess = true,
-                    RequestedUserMobile = user.PhoneNumber,
+                    RequestedUserMobile = _user.PhoneNumber,
                     Exception = new Error(2001,"Processing Error")
                 });
-            }
-           
+            }           
         }
 
         // GET: one10/ReportsMobile/5
         [ResponseType(typeof(Report))]
         public async Task<IHttpActionResult> GetReport(int id)
         {
-            Report report = await db.Reports.FindAsync(id);
-            if (report == null)
-            {
-                return NotFound();
-            }
-
-            return Ok(report);
-        }
-
-        // PUT: one10/ReportsMobile/5
-        [ResponseType(typeof(void))]
-        public async Task<IHttpActionResult> PutReport(int id, Report report)
-        {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-
-            if (id != report.ReportId)
-            {
-                return BadRequest();
-            }
-
-            db.Entry(report).State = EntityState.Modified;
-
+            _user = await _userManager.FindByIdAsync(User.Identity.GetUserId());
             try
             {
-                await db.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!ReportExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
 
-            return StatusCode(HttpStatusCode.NoContent);
+                return Ok(new BaseResponseModel<MyReports>()
+                {
+                    IsSucess = true,
+                    RequestedUserMobile = _user.PhoneNumber,
+                    Results = _repo.GetMyReportDetail(id,_user.Id)
+                });
+            }
+            catch (Exception ex)
+            {
+                _log.Error(ex);
+                return Ok(new BaseResponseModel<MyReports>()
+                {
+                    IsSucess = true,
+                    RequestedUserMobile = _user.PhoneNumber,
+                    Exception = new Error(2001, "Processing Error")
+                });
+            }
         }
 
         // POST: one10/ReportsMobile
@@ -129,16 +113,28 @@ namespace OneCountryWebApi.Controllers.Mobile
         [ResponseType(typeof(Report))]
         public async Task<IHttpActionResult> DeleteReport(int id)
         {
-            Report report = await db.Reports.FindAsync(id);
-            if (report == null)
+            _user = await _userManager.FindByIdAsync(User.Identity.GetUserId());
+            try
             {
-                return NotFound();
+                var status = await _repo.DeleteReport(id, _user.Id);
+                return Ok(new BaseResponseModel<bool>()
+                {
+                    IsSucess = true,
+                    RequestedUserMobile = _user.PhoneNumber,
+                    Results = status
+
+            });
             }
-
-            db.Reports.Remove(report);
-            await db.SaveChangesAsync();
-
-            return Ok(report);
+            catch (Exception ex)
+            {
+                _log.Error(ex);
+                return Ok(new BaseResponseModel<MyReports>()
+                {
+                    IsSucess = true,
+                    RequestedUserMobile = _user.PhoneNumber,
+                    Exception = new Error(2001, "Processing Error")
+                });
+            }
         }
 
         protected override void Dispose(bool disposing)

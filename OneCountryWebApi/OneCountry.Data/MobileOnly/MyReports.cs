@@ -11,6 +11,19 @@ namespace OneCountry.Data.MobileOnly
     {
         public string ImageUrl { get; set; }
         public string MobileNumber { get; set; }
+
+        public MyReports(int id, string caseId, string description, double lat, double longt, string action, string status,string image, string mobile)
+        {
+            Id = id;
+            CaseId = caseId;
+            description = Description;
+            LocationLat = lat;
+            LocationLong = longt;
+            Action = action;
+            Status = status;
+            ImageUrl = image;
+            MobileNumber = mobile;
+        }
     }
 
     public class MyReportListItem
@@ -21,12 +34,13 @@ namespace OneCountry.Data.MobileOnly
         public double LocationLat { get; set; }
         public double LocationLong { get; set; }
         public string Action { get; set; }
+        public string Status { get; set; }
 
         public MyReportListItem()
         {
             //default
         }
-        public MyReportListItem(int id, string caseId,string description,double lat,double longt,string action)
+        public MyReportListItem(int id, string caseId,string description,double lat,double longt,string action,string status)
         {
             Id = id;
             CaseId = caseId;
@@ -34,6 +48,7 @@ namespace OneCountry.Data.MobileOnly
             LocationLat = lat;
             LocationLong = longt;
             Action = action;
+            Status = status;
         }
 
     }
