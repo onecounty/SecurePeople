@@ -1,9 +1,0 @@
-E:\OneCountry\SecurePeople\OneCountryWebApi\OneCountryData\bin\Debug\netstandard2.0\OneCountryData.deps.json
-E:\OneCountry\SecurePeople\OneCountryWebApi\OneCountryData\bin\Debug\netstandard2.0\OneCountryData.dll
-E:\OneCountry\SecurePeople\OneCountryWebApi\OneCountryData\bin\Debug\netstandard2.0\OneCountryData.pdb
-E:\OneCountry\SecurePeople\OneCountryWebApi\OneCountryData\obj\Debug\netstandard2.0\OneCountryData.csprojAssemblyReference.cache
-E:\OneCountry\SecurePeople\OneCountryWebApi\OneCountryData\obj\Debug\netstandard2.0\OneCountryData.csproj.CoreCompileInputs.cache
-E:\OneCountry\SecurePeople\OneCountryWebApi\OneCountryData\obj\Debug\netstandard2.0\OneCountryData.AssemblyInfoInputs.cache
-E:\OneCountry\SecurePeople\OneCountryWebApi\OneCountryData\obj\Debug\netstandard2.0\OneCountryData.AssemblyInfo.cs
-E:\OneCountry\SecurePeople\OneCountryWebApi\OneCountryData\obj\Debug\netstandard2.0\OneCountryData.dll
-E:\OneCountry\SecurePeople\OneCountryWebApi\OneCountryData\obj\Debug\netstandard2.0\OneCountryData.pdb
