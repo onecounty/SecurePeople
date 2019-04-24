@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity;
 using System.Security.Claims;
 using System.Threading.Tasks;
@@ -12,6 +13,11 @@ namespace OneCountryWebApi.Models
     public class ApplicationUser : IdentityUser
     {
         public string UniqueDeviceId { get; set; }
+        [MaxLength(1500)]
+        [Required]
+        public string FullName { get; set; }
+        [StringLength(10)]
+        public string Nic { get; set; }
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager, string authenticationType)
         {
             // Note the authenticationType must match the one defined in CookieAuthenticationOptions.AuthenticationType

@@ -18,10 +18,10 @@ namespace OneCountryWebApi.Migrations
             context.Roles.AddOrUpdate(new IdentityRole("OneCountry"));
             context.Roles.AddOrUpdate(new IdentityRole("Public"));
 
-            context.Actions.AddOrUpdate(new Models.Action() { ActionName = "Open" });
-            context.Actions.AddOrUpdate(new Models.Action() { ActionName = "InProgress" });
-            context.Actions.AddOrUpdate(new Models.Action() { ActionName = "Closed" });
-            context.Actions.AddOrUpdate(new Models.Action() { ActionName = "Rejected" });
+            //context.Actions.AddOrUpdate(new Models.Action() { ActionName = "Open" });
+            //context.Actions.AddOrUpdate(new Models.Action() { ActionName = "InProgress" });
+            //context.Actions.AddOrUpdate(new Models.Action() { ActionName = "Closed" });
+            //context.Actions.AddOrUpdate(new Models.Action() { ActionName = "Rejected" });
         }
     }
 }

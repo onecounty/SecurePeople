@@ -119,3 +119,4 @@ E:\Projects\OneCountry\OneCountryWebApi\OneCountryWebApi\obj\Debug\OneCountryWeb
 E:\Projects\OneCountry\OneCountryWebApi\OneCountryWebApi\obj\Debug\OneCountryWebApi.pdb
 E:\Projects\OneCountry\OneCountryWebApi\OneCountryWebApi\obj\Debug\OneCountryWebApi.Migrations.dataModelInit.resources
 E:\Projects\OneCountry\OneCountryWebApi\OneCountryWebApi\obj\Debug\OneCountryWebApi.csproj.GenerateResource.cache
+E:\Projects\OneCountry\OneCountryWebApi\OneCountryWebApi\obj\Debug\OneCountryWebApi.Migrations.peronaldetails.resources

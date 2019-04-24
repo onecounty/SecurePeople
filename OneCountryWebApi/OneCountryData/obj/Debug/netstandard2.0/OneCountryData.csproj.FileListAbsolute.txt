@@ -1,9 +1,0 @@
-E:\Projects\OneCountry\OneCountryWebApi\OneCountryData\bin\Debug\netstandard2.0\OneCountryData.deps.json
-E:\Projects\OneCountry\OneCountryWebApi\OneCountryData\bin\Debug\netstandard2.0\OneCountryData.dll
-E:\Projects\OneCountry\OneCountryWebApi\OneCountryData\bin\Debug\netstandard2.0\OneCountryData.pdb
-E:\Projects\OneCountry\OneCountryWebApi\OneCountryData\obj\Debug\netstandard2.0\OneCountryData.csprojAssemblyReference.cache
-E:\Projects\OneCountry\OneCountryWebApi\OneCountryData\obj\Debug\netstandard2.0\OneCountryData.csproj.CoreCompileInputs.cache
-E:\Projects\OneCountry\OneCountryWebApi\OneCountryData\obj\Debug\netstandard2.0\OneCountryData.AssemblyInfoInputs.cache
-E:\Projects\OneCountry\OneCountryWebApi\OneCountryData\obj\Debug\netstandard2.0\OneCountryData.AssemblyInfo.cs
-E:\Projects\OneCountry\OneCountryWebApi\OneCountryData\obj\Debug\netstandard2.0\OneCountryData.dll
-E:\Projects\OneCountry\OneCountryWebApi\OneCountryData\obj\Debug\netstandard2.0\OneCountryData.pdb
