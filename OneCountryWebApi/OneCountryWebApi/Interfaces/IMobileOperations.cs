@@ -12,5 +12,6 @@ namespace OneCountryWebApi.Interfaces
         List<MyReportListItem> GetAllMyReports(string userId);
         MyReports GetMyReportDetail(int Id, string userId);
         Task<bool> DeleteReport(int Id, string userId);
+        Task<MyReportUpload> CreateReport(MyReportUpload report, string userId, string path);
     }
 }

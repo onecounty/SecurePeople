@@ -25,6 +25,12 @@ namespace OneCountryWebApi
                 routeTemplate: "one10/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+            //string location, int actionId, string description,int page,int itemsPerPage
+            config.Routes.MapHttpRoute(
+                name: "WebApplicationApi",
+                routeTemplate: "one10/{controller}/{location}/{actionId}/{description}/{page}/{itemsPerPage}",
+                defaults: new { location = RouteParameter.Optional , actionId = RouteParameter.Optional, description = RouteParameter.Optional, page = 0, itemsPerPage = 20, }
+            );
         }
     }
 }

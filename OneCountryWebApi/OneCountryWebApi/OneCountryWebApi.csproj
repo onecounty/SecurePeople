@@ -217,12 +217,14 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\Mobile\ReportsMobileController.cs" />
+    <Compile Include="Controllers\ReportsController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Converters\ReportMobileConverter.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Interfaces\IAdmin.cs" />
     <Compile Include="Interfaces\IMobileOperations.cs" />
     <Compile Include="Migrations\201904241034005_dataModelInit.cs" />
     <Compile Include="Migrations\201904241034005_dataModelInit.Designer.cs">
@@ -244,6 +246,7 @@
     <Compile Include="Models\OneReport.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\ApplicationOAuthProvider.cs" />
+    <Compile Include="Repository\AdminRepository.cs" />
     <Compile Include="Repository\Base\BaseRepository.cs" />
     <Compile Include="Repository\MobileOperationsRepository.cs" />
     <Compile Include="Results\ChallengeResult.cs" />
@@ -335,6 +338,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Images\" />
     <Folder Include="Content\AdminLTE\" />
     <Folder Include="Content\css\" />
     <Folder Include="Content\fonts\" />

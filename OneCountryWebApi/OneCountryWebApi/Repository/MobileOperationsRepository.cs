@@ -8,6 +8,7 @@ using OneCountryWebApi.Repository.Base;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
@@ -50,11 +51,52 @@ namespace OneCountryWebApi.Repository
             return true;
         }
 
+
+        public async Task<MyReportUpload> CreateReport(MyReportUpload report, string userId,string path)
+        {
+            Report tempItem = ReportMobileConverter.ConvertMyReportUploadsToReport(report);
+            tempItem.CreatedUserId = userId;
+            try
+            {
+                _db.Reports.Add(tempItem);
+                await _db.SaveChangesAsync();
+
+                string fileName= FilesSave(report.Image, path, report.fileExtention, tempItem.ReportId);
+
+                tempItem.PhotoUrl = fileName;
+                _db.Entry(report).State = EntityState.Modified;
+                await _db.SaveChangesAsync();
+                return ReportMobileConverter.ConvertReportToMyReportUploads(tempItem);
+
+            }
+            catch (Exception ex)
+            {
+                _logger.Error(ex);
+                return ReportMobileConverter.ConvertReportToMyReportUploads(tempItem);
+            }
+        }
+
         private async Task updateDetailReport(int Id, Report report)
         {
             report.IsDelete = true;
             _db.Entry(report).State = EntityState.Modified;
             await _db.SaveChangesAsync();
+        }
+
+        private string FilesSave(byte[] file,string path,string fileExtention,int Id)
+        {
+            if (!System.IO.Directory.Exists(path))
+            {
+                System.IO.Directory.CreateDirectory(path); 
+            }
+
+            string imageName = Id.ToString() + "."+ fileExtention;
+
+            string imgPath = Path.Combine(path, imageName);
+
+            File.WriteAllBytes(imgPath, file);
+
+            return "Images/"+imageName;
         }
     }
 }

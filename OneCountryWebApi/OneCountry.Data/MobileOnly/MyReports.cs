@@ -30,8 +30,11 @@ namespace OneCountry.Data.MobileOnly
     {
         public int Id { get; set; }
         public string CaseId { get; set; }
+        [Required]
         public string Description { get; set; }
+        [Required]
         public double LocationLat { get; set; }
+        [Required]
         public double LocationLong { get; set; }
         public string Action { get; set; }
         public string Status { get; set; }
@@ -56,5 +59,10 @@ namespace OneCountry.Data.MobileOnly
     public class MyReportUpload: MyReportListItem
     {
         public byte[] Image { get; set; }
-        public string MobileNumber { get; set; }    }
+        [Required]
+        public string MobileNumber { get; set; }
+        public double UploadedLocationLat { get; set; }
+        public double UploadedLocationLong { get; set; }
+        public string fileExtention { get; set; }
+    }
 }
