@@ -122,3 +122,5 @@ E:\Projects\OneCountry\OneCountryWebApi\OneCountryWebApi\bin\OneCountry.Data.dll
 E:\Projects\OneCountry\OneCountryWebApi\OneCountryWebApi\bin\OneCountry.Data.pdb
 E:\Projects\OneCountry\OneCountryWebApi\OneCountryWebApi\bin\OneCountry.Data.dll.config
 E:\Projects\OneCountry\OneCountryWebApi\OneCountryWebApi\obj\Debug\OneCountryWebApi.Migrations.userReference.resources
+E:\Projects\OneCountry\OneCountryWebApi\OneCountryWebApi\bin\log4net.dll
+E:\Projects\OneCountry\OneCountryWebApi\OneCountryWebApi\bin\log4net.xml

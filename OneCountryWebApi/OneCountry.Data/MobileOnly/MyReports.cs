@@ -22,6 +22,20 @@ namespace OneCountry.Data.MobileOnly
         public double LocationLong { get; set; }
         public string Action { get; set; }
 
+        public MyReportListItem()
+        {
+            //default
+        }
+        public MyReportListItem(int id, string caseId,string description,double lat,double longt,string action)
+        {
+            Id = id;
+            CaseId = caseId;
+            description = Description;
+            LocationLat = lat;
+            LocationLong = longt;
+            Action = action;
+        }
+
     }
 
     public class MyReportUpload: MyReportListItem
