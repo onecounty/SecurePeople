@@ -1,0 +1,77 @@
+﻿
+@{
+    ViewBag.Title = "Incident List";
+    Layout = "";
+}
+
+<section class="content">
+    <h2>Reported Threats</h2>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="box box-primary">
+                <form ng-submit="GetEvoucherDetails()">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Reported Threat Details</h3>
+                        <div class="row">
+                            <div class="col-md-4"></div>
+                            <div class="col-md-4"></div>
+                            <div class="col-md-4">
+                                <div class="input-group pull-right">
+                                    <label for="txtEpin"></label>
+                                    <input type="text" class="form-control" id="txtEpin" placeholder="Enter Area" ng-model="Epin" required>
+                                    <span class="input-group-btn">
+                                        <button type="submit" class="btn btn-primary">
+                                            <i class="fa fa-search"></i>
+                                            &nbsp;Search
+                                        </button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- /.box-header -->
+                    <div class="box-body table-responsive">
+                        <table class="table table-bordered table-striped" id="tblAddedItems">
+                            <tr>
+                                <th style="width: 10%">Incident #</th>
+                                <th>Reported By</th>
+                                <th>Location</th>
+                                <th>Description</th>
+                                <th>Action Taken</th>
+                                <th>Date</th>
+                                <th>Action Details</th>
+                                <th>Updated By</th>
+                                <th>Updated On</th>
+                            </tr>
+                            @*<tr ng-repeat="item in EvouchersData | startFrom: pagination.page * pagination.perPage | limitTo: pagination.perPage" class="quotitemrow">
+                                    <td>{{item.EVouchersID}}</td>
+                                    <td>{{item.CreaterName}}</td>
+                                    <td>{{item.RecieverName}}</td>
+                                    <td>{{item.VoucherCode}}</td>
+                                    <td>{{item.CreatedDate}}</td>
+                                    <td>{{item.UsedDate}}</td>
+                                    <td>
+                                        <div class="text-center" ng-switch on="{{item.IsUsed}}">
+                                            <img ng-switch-when="true" width="10" height="10" ng-src="~/Content/images/red.jpg" />
+                                            <img ng-switch-when="false" width="10" height="10" ng-src="~/Content/images/green.jpg" />
+                                        </div>
+                                    </td>
+                                </tr>*@
+                        </table>
+                    </div><!-- /.box-body -->
+                    <div class="box-footer">
+                        <ul class="pagination pagination-sm no-margin pull-right">
+                            <li><a href="javascript:return false;" ng-click="pagination.prevPage()">«</a></li>
+                            <li ng-repeat="n in [] | range: pagination.numPages" ng-class="{active: n == pagination.page}">
+                                <a href="" ng-click="pagination.toPageId(n)">{{n + 1}}</a>
+                            </li>
+                            <li><a href="javascript:return false;" ng-click="pagination.nextPage()">»</a></li>
+                        </ul>
+                    </div><!-- box-footer -->
+
+                </form>
+            </div><!-- /.box -->
+        </div>
+    </div>
+</section>
+

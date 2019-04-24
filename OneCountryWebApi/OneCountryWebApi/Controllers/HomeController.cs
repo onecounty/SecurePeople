@@ -14,5 +14,15 @@ namespace OneCountryWebApi.Controllers
 
             return View();
         }
+
+        public ActionResult IncidentList()
+        {
+            return View();
+        }
+
+        public ActionResult Incident(int incidentID)
+        {
+            return View();
+        }
     }
 }

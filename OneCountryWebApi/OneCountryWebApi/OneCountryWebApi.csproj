@@ -213,6 +213,7 @@
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -227,13 +228,26 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\HelpPage\HelpPage.css" />
+    <Content Include="bootstrap-theme.css" />
+    <Content Include="bootstrap.css" />
+    <Content Include="bootstrap.min.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\images\91109-sri-lanka-final-2.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="Scripts\angular-animate.js" />
+    <Content Include="Scripts\angular-route.min.js" />
+    <Content Include="Scripts\angular.min.js" />
+    <Content Include="Scripts\angular\app.js" />
+    <Content Include="Scripts\angular\Controllers\IncidentListController.js" />
+    <Content Include="Scripts\angular\Controllers\LandingPageController.js" />
+    <Content Include="Scripts\angular\Controllers\UserController.js" />
+    <Content Include="Scripts\angular\Factories\GetFactory.js" />
+    <Content Include="Scripts\angular\Factories\PostFactory.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Areas\HelpPage\Views\Web.config" />
@@ -266,6 +280,17 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\UtilityMethods.js" />
+    <Content Include="Site.css" />
+    <Content Include="Uploads\BankProofs\0fc8ea42-a5cc-4907-b61f-d7c423bbd83e.jpg" />
+    <Content Include="Uploads\BankProofs\1.jpg" />
+    <Content Include="Uploads\BankProofs\279fa2c6-4b1c-4562-a027-e89b770d5a72.PNG" />
+    <Content Include="Uploads\BankProofs\6297d096-19af-4fa3-befb-317d9cc13c32.jpg" />
+    <Content Include="Uploads\BankProofs\69c8fb2b-f32d-46b6-9846-7a3484a27b12.jpg" />
+    <Content Include="Uploads\BankProofs\7126962d-fcb0-4146-a5b6-788dcbfc6b18.jpg" />
+    <Content Include="Uploads\BankProofs\780f7638-816a-42f4-a5b3-df7a5cad876c.jpg" />
+    <Content Include="Uploads\BankProofs\a4794ff6-759e-4830-89f4-7dc5470fea96.jpg" />
+    <Content Include="Uploads\ProfileImages\default-user.jpg" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -277,12 +302,19 @@
     <Content Include="Content\Site.css" />
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Shared\_AdminLTELayout.cshtml" />
+    <Content Include="Views\Home\IncidentList.cshtml" />
+    <Content Include="Uploads\ProfileImages\Thumbs.db" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\User\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\AdminLTE\" />
+    <Folder Include="Content\css\" />
+    <Folder Include="Content\fonts\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
