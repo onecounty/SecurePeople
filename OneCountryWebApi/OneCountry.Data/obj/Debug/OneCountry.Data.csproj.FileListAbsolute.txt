@@ -1,0 +1,12 @@
+E:\Projects\OneCountry\OneCountryWebApi\OneCountry.Data\bin\Debug\OneCountry.Data.dll.config
+E:\Projects\OneCountry\OneCountryWebApi\OneCountry.Data\bin\Debug\OneCountry.Data.dll
+E:\Projects\OneCountry\OneCountryWebApi\OneCountry.Data\bin\Debug\OneCountry.Data.pdb
+E:\Projects\OneCountry\OneCountryWebApi\OneCountry.Data\bin\Debug\EntityFramework.dll
+E:\Projects\OneCountry\OneCountryWebApi\OneCountry.Data\bin\Debug\EntityFramework.SqlServer.dll
+E:\Projects\OneCountry\OneCountryWebApi\OneCountry.Data\bin\Debug\EntityFramework.xml
+E:\Projects\OneCountry\OneCountryWebApi\OneCountry.Data\bin\Debug\EntityFramework.SqlServer.xml
+E:\Projects\OneCountry\OneCountryWebApi\OneCountry.Data\obj\Debug\OneCountry.Data.csprojAssemblyReference.cache
+E:\Projects\OneCountry\OneCountryWebApi\OneCountry.Data\obj\Debug\OneCountry.Data.csproj.CoreCompileInputs.cache
+E:\Projects\OneCountry\OneCountryWebApi\OneCountry.Data\obj\Debug\OneCountry.Data.csproj.CopyComplete
+E:\Projects\OneCountry\OneCountryWebApi\OneCountry.Data\obj\Debug\OneCountry.Data.dll
+E:\Projects\OneCountry\OneCountryWebApi\OneCountry.Data\obj\Debug\OneCountry.Data.pdb

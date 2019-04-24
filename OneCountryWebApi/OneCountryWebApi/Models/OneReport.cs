@@ -40,8 +40,11 @@ namespace OneCountryWebApi.Models
         public DateTime LastActionTakenDate { get; set; }
         public bool IsDelete { get; set; }
 
+        [ForeignKey("CreatedUser")]
+        public string CreatedUserId { get; set; }
 
         public virtual Action LastAction { get; set; }
+        public virtual ApplicationUser CreatedUser { get; set; }
 
     }
 }

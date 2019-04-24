@@ -225,6 +225,10 @@
     <Compile Include="Migrations\201904241037138_peronaldetails.Designer.cs">
       <DependentUpon>201904241037138_peronaldetails.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201904241137319_userReference.cs" />
+    <Compile Include="Migrations\201904241137319_userReference.Designer.cs">
+      <DependentUpon>201904241137319_userReference.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -330,6 +334,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201904241037138_peronaldetails.resx">
       <DependentUpon>201904241037138_peronaldetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904241137319_userReference.resx">
+      <DependentUpon>201904241137319_userReference.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

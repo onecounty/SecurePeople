@@ -9,6 +9,7 @@ namespace OneCountry.Data.Base
     public class BaseResponseModel<T>
     {
         public bool IsSucess { get; set; }
+        public string RequestedUserMobile { get; set; }
         public Error Exception { get; set; }
         public T Results { get; set; }
     }

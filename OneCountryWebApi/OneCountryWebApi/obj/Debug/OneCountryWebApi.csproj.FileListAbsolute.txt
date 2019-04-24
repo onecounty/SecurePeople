@@ -66,7 +66,6 @@ E:\Projects\OneCountry\OneCountryWebApi\OneCountryWebApi\bin\Microsoft.Owin.Secu
 E:\Projects\OneCountry\OneCountryWebApi\OneCountryWebApi\bin\Microsoft.Owin.Security.Twitter.dll
 E:\Projects\OneCountry\OneCountryWebApi\OneCountryWebApi\bin\Microsoft.Web.Infrastructure.dll
 E:\Projects\OneCountry\OneCountryWebApi\OneCountryWebApi\bin\Newtonsoft.Json.dll
-E:\Projects\OneCountry\OneCountryWebApi\OneCountryWebApi\bin\OneCountryData.dll
 E:\Projects\OneCountry\OneCountryWebApi\OneCountryWebApi\bin\Owin.dll
 E:\Projects\OneCountry\OneCountryWebApi\OneCountryWebApi\bin\System.Diagnostics.DiagnosticSource.dll
 E:\Projects\OneCountry\OneCountryWebApi\OneCountryWebApi\bin\System.Net.Http.Formatting.dll
@@ -81,7 +80,6 @@ E:\Projects\OneCountry\OneCountryWebApi\OneCountryWebApi\bin\System.Web.WebPages
 E:\Projects\OneCountry\OneCountryWebApi\OneCountryWebApi\bin\System.Web.WebPages.dll
 E:\Projects\OneCountry\OneCountryWebApi\OneCountryWebApi\bin\System.Web.WebPages.Razor.dll
 E:\Projects\OneCountry\OneCountryWebApi\OneCountryWebApi\bin\WebGrease.dll
-E:\Projects\OneCountry\OneCountryWebApi\OneCountryWebApi\bin\OneCountryData.pdb
 E:\Projects\OneCountry\OneCountryWebApi\OneCountryWebApi\bin\Newtonsoft.Json.xml
 E:\Projects\OneCountry\OneCountryWebApi\OneCountryWebApi\bin\System.Net.Http.Formatting.xml
 E:\Projects\OneCountry\OneCountryWebApi\OneCountryWebApi\bin\System.Web.Helpers.xml
@@ -120,3 +118,7 @@ E:\Projects\OneCountry\OneCountryWebApi\OneCountryWebApi\obj\Debug\OneCountryWeb
 E:\Projects\OneCountry\OneCountryWebApi\OneCountryWebApi\obj\Debug\OneCountryWebApi.Migrations.dataModelInit.resources
 E:\Projects\OneCountry\OneCountryWebApi\OneCountryWebApi\obj\Debug\OneCountryWebApi.csproj.GenerateResource.cache
 E:\Projects\OneCountry\OneCountryWebApi\OneCountryWebApi\obj\Debug\OneCountryWebApi.Migrations.peronaldetails.resources
+E:\Projects\OneCountry\OneCountryWebApi\OneCountryWebApi\bin\OneCountry.Data.dll
+E:\Projects\OneCountry\OneCountryWebApi\OneCountryWebApi\bin\OneCountry.Data.pdb
+E:\Projects\OneCountry\OneCountryWebApi\OneCountryWebApi\bin\OneCountry.Data.dll.config
+E:\Projects\OneCountry\OneCountryWebApi\OneCountryWebApi\obj\Debug\OneCountryWebApi.Migrations.userReference.resources

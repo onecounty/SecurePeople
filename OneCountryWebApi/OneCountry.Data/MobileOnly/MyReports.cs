@@ -7,19 +7,15 @@ using System.Threading.Tasks;
 
 namespace OneCountry.Data.MobileOnly
 {
-    public class MyReports
+    public class MyReports: MyReportListItem
     {
-        public string CaseId { get; set; }
-        public string Description { get; set; }
-        public double UploadedLat { get; set; }
-        public double UploadedLong { get; set; }
-        public double LocationLat { get; set; }
-        public double LocationLong { get; set; }       
+        public string ImageUrl { get; set; }
         public string MobileNumber { get; set; }
     }
 
     public class MyReportListItem
     {
+        public int Id { get; set; }
         public string CaseId { get; set; }
         public string Description { get; set; }
         public double LocationLat { get; set; }
@@ -27,4 +23,9 @@ namespace OneCountry.Data.MobileOnly
         public string Action { get; set; }
 
     }
+
+    public class MyReportUpload: MyReportListItem
+    {
+        public byte[] Image { get; set; }
+        public string MobileNumber { get; set; }    }
 }
